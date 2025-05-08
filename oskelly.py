@@ -8,9 +8,9 @@ def oskelly_scrap():
     id_nums = {}
     id_list = []
 
-    i = 8000
-    while i <= 16008:
-        response = requests.get("https://oskelly.ru/api/v2/publicprofile/followings-page?userId=10&page="+str(i)+"&pageSize=20&query=",).json()##["response"]
+    i = 1
+    while i <= 290:
+        response = requests.get("https://oskelly.ru/api/v2/publicprofile/followings-page?userId=193247&page="+str(i)+"&pageSize=2500&query=",).json()##["response"]
 
         print("Номер страницы:", i)
         file = open("id.txt", "w", encoding="utf-8")
@@ -33,4 +33,3 @@ def oskelly_scrap():
 
 
 oskelly_scrap()
-
